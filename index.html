@@ -3,11 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>goit-js-hw-12-countries</title>
+    <title>Search your country</title>
+    <link rel="shortcut icon" href="./src/image/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
-<body>
-    <h1>Hello</h1>
+<body class="body">
+    <h2 class="page-title">Search your country</h2>
+
+    <div class="search">
+        <form class="search__form">
+            <label class="search__label" for="country-input">
+                <input class="search__input" name="country-input" id="country-input" type="text" placeholder="Write your country...">
+            </label>
+        </form>
+        <div class="search__autocomplete">
+            <ul class="search__autocomplete-list"></ul>
+        </div>
+
+        <div class="search__country-card-container"></div>
+    </div>
+
+    <script id="country-card-template" type="text/x-handlebars-template">
+        <div class="country-card">
+            <h3 class="country-card__title">{{name.common}}</h3>
+            <div class="country-info">
+                <div class="country-info__text-group">
+                    <p class="country-info__text">Capital: <span class="country-info__text-content">{{capital}}</span></p>
+                    <p class="country-info__text">Population: <span class="country-info__text-content">{{population}}</span></p>
+                    <p class="country-info__text">Languages:
+                        <ul class="country-info__language-list">
+                            {{#each languages}}
+                                <li class="country-info__language-item">{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </p>
+                </div>
+                <img class="country-info__image" src="{{flags.png}}" alt="Flag {{name.common}}">
+            </div>
+        </div>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="./src/js/index.js"></script>
 </body>
 </html>

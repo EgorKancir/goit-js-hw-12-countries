@@ -1,0 +1,141 @@
+body {
+    background-color: rgb(173 215 255);
+    background-image: url("../image/pngfind.com-to-be-continued-jojo-2249862.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    padding: 50px 20px;
+    height: 100vh;
+}
+h1, h2, h3, h4, h5, h6, p, ul, li {
+    padding: 0;
+    margin: 0;
+}
+.page-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 70px;
+    color: white;
+    background-color: black;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+.search {
+    width: auto;
+    position: relative;
+}
+.search__input {
+    font-size: 40px;
+    width: 450px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.search__input:focus-visible {
+    outline: none;
+}
+.search__autocomplete.activ {
+    display: block;
+}
+.search__autocomplete {
+    display: none;
+    width: auto;
+    background-color: #32c2ff;
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    border-radius: 0 10px 10px 10px;
+    padding: 10px 50px 30px 2px;
+}
+.search__autocomplete-list {
+    padding-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+.search__autocomplete-list-item {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.search__country-card-container {
+    display: none;
+}
+.search__country-card-container.activ {
+    display: block;
+}
+.country-card {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    padding: 30px;
+    background-color: #74a9ff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.country-card__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: black;
+}
+.country-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+.country-info__text-group {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+.country-info__text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: black;
+}
+.country-info__text-content {
+    font-weight: 100;
+}
+.country-info__language-group {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+.country-info__language-list {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 30px;
+}
+.country-info__language-item {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+}
+.country-info__image {
+    width: 320px;
+    height: auto;
+    object-fit: contain;    
+    border: 2px solid black;
+}
